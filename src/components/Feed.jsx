@@ -30,7 +30,7 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright 2024 Cinex Ent
+          Copyright 2024 Erick Njogu
         </Typography>
       </Box>
 
