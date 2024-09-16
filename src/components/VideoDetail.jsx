@@ -78,7 +78,7 @@ const VideoDetail = () => {
   }
 
   const {
-    snippet: { title, channelId, channelTitle },
+    snippet: { publishedAt, title, channelId, channelTitle },
     statistics: { viewCount, likeCount },
   } = videoDetail;
 
@@ -114,11 +114,10 @@ const VideoDetail = () => {
                   <Typography
                     color="#fff"
                     variant={{ sm: "subtitle1", md: "h6" }}
-                    fontWeight="light"
                   >
-                    {channelTitle}{" "}
+                    {channelTitle}
                     <CheckCircle
-                      sx={{ fontSize: 12, color: "gray", ml: "5px" }}
+                      sx={{ fontSize: 11, color: "gray", ml: "5px" }}
                     />
                   </Typography>
                 </Link>
@@ -132,6 +131,12 @@ const VideoDetail = () => {
                     sx={{ opacity: 0.7 }}
                   >
                     {parseInt(viewCount).toLocaleString()} Views
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{ opacity: 0.7 }}
+                  >
+                    {new Date(publishedAt).toLocaleDateString()}
                   </Typography>
                   <Typography
                     variant="body1"
